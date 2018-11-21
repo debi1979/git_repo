@@ -1,0 +1,27 @@
+pipeline{
+	agent any
+		stages{
+			stages('one'){
+				steps {
+					echo 'Hi, this my 1st groovy script'
+				}
+			}
+			stages('Two') {
+				steps  {
+					input('Do you want to proceed')
+				}
+			}
+			stages('Three') {
+				when {
+			             not {
+						branch "master"
+				     }
+				}
+				steps {
+					echo 'Hello jenkins pipeline'
+				}
+			}
+		}
+}
+	 
+			 	 				
