@@ -1,2 +1,4 @@
 First time check
+this is 1st text
 2nd time check
+saved to stash
