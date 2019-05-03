@@ -1,17 +1,17 @@
 pipeline{
 	agent any
 		stages{
-			stages('one'){
+			stage('one'){
 				steps {
 					echo 'Hi, this my 1st groovy script'
 				}
 			}
-			stages('Two') {
+			stage('Two') {
 				steps  {
 					input('Do you want to proceed?')
 				}
 			}
-			stages('Three') {
+			stage('Three') {
 				when {
 			             not {
 						branch "master"
